@@ -2,17 +2,13 @@
 
 import React from "react";
 
-const Produto = ({nome, preco, descricao}) =>{
+const Produto = ({nome, preco, descricao, onDelete}) =>{
     return (
         <div className="produto">
-            <p>
-                <strong>Nome: </strong>
-                <h3>{nome}</h3>
-            </p>
-           
+            <p><strong>Nome: </strong>{nome}</p>           
             <p><strong>Preço:</strong>{preco}</p>
             <p><strong>Descrição:</strong>{descricao}</p>
-            <button>Excluir</button>
+            <button onClick={onDelete}>Excluir</button>
         </div>
     );
 };
