@@ -21,30 +21,30 @@ const AtualizaItem = (props) =>{
                 />
             ))}
 
-        <form onSubmit={handleAtualizar}>
-            <input
-                type="text"
-                placeholder="Nome do Produto"
-                value={props.produto.nome}
-                onChange={(e) => props.setNome(e.target.value)}
-                required
-            />
-            <input
-                type="number"
-                placeholder="Preço do Produto"
-                value={props.produto.preco}
-                onChange={(e) => props.setPreco(e.target.value)}
-                required
-            />
-            <input
-                type="text"
-                placeholder="Descrição do Produto"
-                value={props.produto.descricao}
-                onChange={(e) => props.setDescricao(e.target.value)}
-                required
-            />
-            <button type="submit">Atualizar Item</button>
-            </form>
+                <form onSubmit={handleAtualizar}>
+                    <input
+                        type="text"
+                        placeholder="Nome do Produto"
+                        value={props.produto.nome}
+                        onChange={(e) => props.setNome(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="number"
+                        placeholder="Preço do Produto"
+                        value={props.produto.preco}
+                        onChange={(e) => props.setPreco(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="Descrição do Produto"
+                        value={props.produto.descricao}
+                        onChange={(e) => props.statussetDescricao(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Atualizar Item</button>
+                    </form>
 
         </div>
       

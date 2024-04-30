@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import FormularioInserirProduto from './componentes/FormularioInserirProduto';
 import ListaDeProdutos from './componentes/ListaDeProdutos';
+import AtualizaItem from './componentes/AtualizaItem';
 
 function App() {
 
