@@ -4,17 +4,19 @@ import React, {useState} from "react";
 import Produto from "./Produtos";
 
 
-const ListaDeProdutos = ({produtos, onExcluirProduto}) =>{
+//const ListaDeProdutos = ({produtos, onExcluirProduto}) =>{
+const ListaDeProdutos = (props) =>{
+
 
   return (
     <div className="lista-de-produtos">
-        {produtos.map(produto => (
+        {props.produtos.map(produto => (
             <Produto
                 key={produto.id}
                 nome={produto.nome}
                 preco={produto.preco}
                 descricao={produto.descricao}
-                onDelete={() => onExcluirProduto(produto.id)}
+                onDelete={() => props.onExcluirProduto(produto.id)}
             />
         ))}
     </div>

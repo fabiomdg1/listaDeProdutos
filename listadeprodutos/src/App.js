@@ -21,12 +21,24 @@ function App() {
     const novaListaProdutos = listaProdutos.filter(produto => produto.id !== idProduto);
     setListaProdutos(novaListaProdutos);    
   };
+
+  const atualizarProduto = (idProduto, novosDadosProdutos) => {
+    const novaListaProdutos = listaProdutos.map(produto => {
+      if(produto.id === idProduto) {
+        return { ...produto, ...novosDadosProdutos};
+      } else {
+        return produto;
+      }
+    });
+    setListaProdutos(novaListaProdutos);
+  }
   
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
       <FormularioInserirProduto onAdicionarProduto={adicionarNovoProduto}/>
-      <ListaDeProdutos produtos={listaProdutos} onExcluirProduto={excluirProduto}/>      
+      <ListaDeProdutos produtos={listaProdutos} onExcluirProduto={excluirProduto} onAtualizarProduto={atualizarProduto}/>   
+      <atualizarItem  itens={listaProdutos} onAdicionarProduto={atualizarProduto}/>   
     </div>
   );
 }
